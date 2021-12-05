@@ -1,0 +1,234 @@
+.header {
+  height: 120px;
+  background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+.header_navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header_navbar-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 4px;
+}
+
+.header_navbar-item {
+  margin: 0 8px;
+  position: relative;
+  min-height: 26px;
+}
+.header_navbar-item--has-qr:hover .header_qr {
+  display: block;
+}
+.header_navbar-item--has-notify:hover .header_notify {
+  display: block;
+}
+.header_navbar-item,
+.header_navbar-item-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 300;
+}
+
+.header_navbar-item,
+.header_navbar-item-link,
+.header_navbar-icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.header_navbar-item:hover,
+.header_navbar-item-link:hover,
+.header_navbar-icon-link:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header_navbar-item--strong {
+  font-weight: 400;
+}
+.header_navbar-item-separate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16px;
+  border-left: 1px solid #fd9086;
+  right: -9px;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header_navbar-icon-link {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.header_navbar_icon {
+  font-size: 1.8rem;
+  margin: 0 8px;
+}
+.header_navbar-item-title--no-pointer {
+  cursor: text;
+  color: var(--white-color);
+}
+
+/*Header QR*/
+.header_qr {
+  background-color: var(--white-color);
+  width: 186px;
+  position: absolute;
+  left: 0;
+  top: 118%;
+  padding: 8px;
+  border-radius: 2px;
+  display: none;
+  animation: fadeIn ease-in 0.3s;
+}
+.header_qr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width: 100%;
+  height: 20px;
+  display: block;
+}
+.header_qr-img {
+  width: 100%;
+}
+.header_qr-apps {
+  display: flex;
+  justify-content: space-between;
+}
+.header_qr-link:nth-child(1) {
+  margin-left: 11px;
+}
+.header_qr-link:nth-child(2) {
+  margin-right: 11px;
+}
+.header_qr-doawload-img {
+  height: 16px;
+}
+
+/*Header Notify*/
+.header_notify {
+  position: absolute;
+  top: 118%;
+  right: 0;
+  width: 404px;
+  border: 1px solid #d3d3d3;
+  background-color: var(--white-color);
+  cursor: text;
+  user-select: none;
+  transform-origin: calc(100%-20px) top;
+  will-change: opacity transform;
+  animation: headerNotifyGrow ease-in 0.2s;
+  border-radius: 2px;
+  display: none;
+}
+.header_notify::before {
+  content: "";
+  border-width: 20px 26px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  position: absolute;
+  top: -29px;
+  right: 4px;
+}
+.header_notify::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90px;
+  height: 20px;
+  right: 0;
+  top: -10px;
+}
+@keyframes headerNotifyGrow {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.header_notify-header {
+  height: 40px;
+  background-color: var(--white-color);
+}
+.header_notify-header h3 {
+  color: #999;
+  margin: 0 0 0 12px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 40px;
+}
+.header_notify-list {
+  padding-left: 0;
+}
+.header_notify-item {
+  display: flex;
+}
+.header_notify-item:hover {
+  background-color: #f7f7f7;
+}
+.header_notify-item--viewed {
+  background-color: rgba(239, 77, 45, 0.08);
+}
+
+.header_notify-link {
+  display: flex;
+  padding: 12px 12px;
+  width: 100%;
+  text-decoration: none;
+}
+.header_notify-img {
+  width: 48px;
+  object-fit: contain;
+}
+.header_notify-info {
+  margin-left: 12px;
+}
+.header_notify-name {
+  display: block;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  color: var(--back-color);
+  font-weight: 400;
+}
+.header_notify-description {
+  display: block;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  color: #756f6e;
+  margin-top: 4px;
+}
+
+.header_notify-footer {
+  display: flex;
+}
+.header_notify-footer-btn {
+  text-decoration: none;
+  padding: 8px 48px;
+  color: var(--text-color);
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal__overlay {
+}
+.modal__body {
+}
+.modal__inner {
+}

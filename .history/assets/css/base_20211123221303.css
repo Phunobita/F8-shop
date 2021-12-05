@@ -1,0 +1,67 @@
+:root {
+  --primary-color: #ef4d2d;
+  --white-color: #fff;
+  --back-color: #000;
+  --text-color: #333;
+  --border-color: #dbdbdb;
+}
+* {
+  box-sizing: inherit;
+}
+html {
+  /*Hack*/
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid_full_width {
+  width: 100%;
+}
+
+.grid_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Animation*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn {
+  min-width: 142px;
+  height: 36px;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+.btn.btn--disable {
+  color: #949494;
+  cursor: default;
+  background-color: #999;
+}
